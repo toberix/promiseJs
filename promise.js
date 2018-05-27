@@ -1,40 +1,40 @@
-let promiseToCleanTheRoom = new Promise(function(resolve, reject){
+let promiseToMarryYou = new Promise(function(resolve, reject){
   
-  let isClean = false;
+  let marryYou = false;
   
-  if(isClean){
-    resolve('Clean');
+  if(marryYou){
+    resolve('Living happily together');
   }else
     {
-      reject('not Clean');
+      reject('Disappointed');
     }
 });
 
 
 
-let cleanRoom = () => {
-  return new Promise(function(resolve, reject){
-    resolve('Cleaned The Room');
+let marryYou = () => {
+  return new Promise((resolve, reject) => {
+    resolve('The outcome of my proposal,');
   });
 };
 
-let removeGarbage = (message) =>{
-  return new Promise(function(resolve, reject){
-    resolve(message + ' remove Garbage');
+let loveYouTruly = (message) =>{
+  return new Promise((resolve, reject)  => {
+    resolve(message + ' a home full of love and happiness.');
   });
 };
 
-let winIcecream = (message) =>{
-  return new Promise(function(resolve, reject){
-    resolve(message + ' won Icecream');
+let livingHappily = (message) =>{
+  return new Promise((resolve, reject) => {
+    resolve(message + ' we have got beautiful children');
   });
 };
 
 
-cleanRoom().then((output)=>{
-  return removeGarbage(output);
+marryYou().then((output)=>{
+  return loveYouTruly(output);
 }).then((output) => {
-  return winIcecream(output)
+  return livingHappily(output)
 }).then((output)=>{
-  console.log('finished ' + output)
+  console.log(output)
 })
